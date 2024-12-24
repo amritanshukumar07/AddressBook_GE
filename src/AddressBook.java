@@ -45,6 +45,16 @@ public class AddressBook {
      }
         System.out.println("Contact not found");
     }
+    public void DeleteContactUsingName(String fName, String lName){
+        for(Contact contact: adBook){
+            if(contact.getfName().equalsIgnoreCase(fName) && contact.getlName().equalsIgnoreCase(lName)){
+                adBook.remove(contact);
+                System.out.println("Contact Deleted Successfully");
+                return;
+            }
+        }
+        System.out.println("Contact not found");
+    }
     public void display(){
         System.out.println(adBook);
     }
