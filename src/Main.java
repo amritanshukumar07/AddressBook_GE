@@ -9,7 +9,11 @@ public class Main {
         Scanner sc= new Scanner(System.in);
         System.out.println("Welcome to addressbook");
         do{
-            System.out.println("Enter 1 -> Create new contact \nEnter 2-> Display existing contacts\nEnter 3 -> Edit a contact \nEnter 0 -> Exit");
+            System.out.println("Enter 1 -> Create new contact \n" +
+                               "Enter 2 -> Display existing contacts\n" +
+                               "Enter 3 -> Edit a contact \n" +
+                               "Enter 4 ->Delete a contact\n"+
+                               "Enter 0 -> Exit");
             int input= sc.nextInt();
             switch (input){
                 case 0 -> i=0;
@@ -20,6 +24,12 @@ public class Main {
                    String firstName= sc.next();
                    String lastName= sc.next();
                    a1.EditContactUsingName(firstName,lastName);
+               }
+               case 4 -> {
+                   System.out.println("Enter the first name and last name of the contact to be deleted");
+                   String firstName= sc.next();
+                   String lastName= sc.next();
+                   a1.DeleteContactUsingName(firstName,lastName);
                }
                 default -> System.out.println("Wrong Input");
             }
