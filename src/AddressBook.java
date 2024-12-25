@@ -4,8 +4,9 @@ import java.util.Scanner;
 
 public class AddressBook {
     List<Contact>  adBook= new ArrayList<>();
+    Scanner sc = new Scanner(System.in);
     public void createContact(){
-        Scanner sc = new Scanner(System.in);
+
         System.out.println("Enter First name");
         String name = sc.next();
         System.out.println("Enter Last name");
@@ -54,6 +55,14 @@ public class AddressBook {
             }
         }
         System.out.println("Contact not found");
+    }
+    public void AddMultipleContact(){
+        System.out.println("Enter the number of contacts to be added");
+        int n= sc.nextInt();
+        for(int i=0;i<n;i++){
+            System.out.println("Contact "+ (i+1)+ " : ");
+            createContact();
+        }
     }
     public void display(){
         System.out.println(adBook);
