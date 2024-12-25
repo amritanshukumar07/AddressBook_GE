@@ -12,7 +12,8 @@ public class Main {
             System.out.println("Enter 1 -> Create new contact \n" +
                                "Enter 2 -> Display existing contacts\n" +
                                "Enter 3 -> Edit a contact \n" +
-                               "Enter 4 ->Delete a contact\n"+
+                               "Enter 4 -> Delete a contact\n"+
+                               "Enter 5 -> Add Multiple Contacts\n"+
                                "Enter 0 -> Exit");
             int input= sc.nextInt();
             switch (input){
@@ -31,6 +32,7 @@ public class Main {
                    String lastName= sc.next();
                    a1.DeleteContactUsingName(firstName,lastName);
                }
+               case 5-> a1.AddMultipleContact();
                 default -> System.out.println("Wrong Input");
             }
 
